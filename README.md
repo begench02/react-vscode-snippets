@@ -1,0 +1,1 @@
+Custom Snippets for React + Typescript + InversifyJS project
