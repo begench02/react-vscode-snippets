@@ -1,1 +1,1 @@
-Custom Snippets for React + Typescript + InversifyJS project
+Custom Snippets for React + Typescript + MobX + InversifyJS project

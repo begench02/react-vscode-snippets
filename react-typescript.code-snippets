@@ -3,9 +3,11 @@
         "prefix": "nc",
         "body": [
             "import { type FC } from 'react';"
-            "import $ from './${TM_FILENAME_BASE/([^.]+).*/$1/}.module.scss'\n"
+            "import $ from './${TM_FILENAME_BASE/([^.]+).*/$1/}.module.scss'"
+            ""
             "export const ${1:${TM_FILENAME_BASE/([^.]+).([^.]+).*/${1:/capitalize}${2:/capitalize}/}}: FC<$1Props> = (props) => {"
-            "  const {$2} = props;\n"
+            "  const {$2} = props;"
+            ""
             "  return ("
             "    <div>"
             "       $3"
@@ -14,7 +16,7 @@
             "};"
             "",
             "export interface $1Props {"
-            "$4"
+            "  $4"
             "}"
             ""
         ],

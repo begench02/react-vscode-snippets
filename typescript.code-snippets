@@ -4,14 +4,17 @@
 		"key": "exportInjectableClass",
         "body": [
             "import { injectable } from 'inversify';"
-            "import { makeAutoObservable } from 'mobx';\n"
+            "import { makeAutoObservable } from 'mobx';"
+			""
             "@injectable()"
 			"export class ${1:${TM_FILENAME_BASE/([^.]+).([^.]+).*/${1:/capitalize}${2:/capitalize}/}} {"
-			"\t$2\n",
-			"\tconstructor($3) {"
-			"\t\tmakeAutoObservable(this);"
-			"\t}\n"
-			"\t$4"
+			"  $2"
+			""
+			"  constructor($3) {"
+			"    makeAutoObservable(this);"
+			"  }"
+			""
+			"  $4"
 			"}"
         ],
 		"description": "Export injectable class (for store or service)"
