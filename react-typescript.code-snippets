@@ -4,9 +4,9 @@
         "body": [
             "import { type FC } from 'react';"
             "import { observer } from 'mobx-react-lite';"
-            "import $ from './${TM_FILENAME_BASE/([^.]+).*/$1/}.module.scss'"
+            "import $ from './${TM_FILENAME_BASE/(\\w+).*/$1/}.module.scss'"
             ""
-            "export const ${1:${TM_FILENAME_BASE/([^.]+).([^.]+).*/${1:/capitalize}${2:/capitalize}/}}: FC<$1Props> = observer((props) => {"
+            "export const ${1:${TM_FILENAME_BASE/(\\w+)-?(\\w+)?.(\\w+)/${1:/capitalize}${2:/capitalize}${3:/capitalize}/}}: FC<$1Props> = observer((props) => {"
             "  const {$2} = props;"
             ""
             "  return ("
@@ -15,7 +15,7 @@
             "    </div>"
             "  );"
             "});"
-            "",
+            ""
             "export interface $1Props {"
             "  $4"
             "}"
